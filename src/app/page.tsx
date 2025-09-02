@@ -3,7 +3,7 @@
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { AdPlaceholder } from '@/components/ad-placeholder';
+import { GoogleAd } from '@/components/google-ad';
 import { CurrencyConverter } from '@/components/converters/currency-converter';
 import { MeasurementConverter } from '@/components/converters/measurement-converter';
 import { FinancialConverter } from '@/components/converters/financial-converter';
@@ -11,6 +11,7 @@ import { HealthConverter } from '@/components/converters/health-converter';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLanguage } from '@/contexts/language-context';
 import { Coins, Ruler, Landmark, HeartPulse } from 'lucide-react';
+import { Faq } from '@/components/layout/faq';
 
 /**
  * Componente principal da página inicial.
@@ -24,12 +25,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1 container mx-auto px-4 py-8">
-        <AdPlaceholder className="h-24 w-full mb-8" />
+        <GoogleAd adSlot="7605794059" className="h-24 w-full mb-8" />
         
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 justify-center">
           {/* Publicidade Lateral Esquerda (visível em telas grandes) */}
           <aside className="hidden lg:flex justify-end sticky top-8 self-start">
-            <AdPlaceholder className="h-[600px] w-[200px]" />
+            <GoogleAd adSlot="4979630719" className="h-[600px] w-[200px]" />
           </aside>
 
           {/* Conteúdo Principal */}
@@ -66,11 +67,13 @@ export default function Home() {
 
           {/* Publicidade Lateral Direita (visível em telas grandes) */}
           <aside className="hidden lg:flex justify-start sticky top-8 self-start">
-            <AdPlaceholder className="h-[600px] w-[200px]" />
+            <GoogleAd adSlot="4979630719" className="h-[600px] w-[200px]" />
           </aside>
         </div>
         
-        <AdPlaceholder className="h-24 w-full mt-8" />
+        <Faq />
+
+        <GoogleAd adSlot="7605794059" className="h-24 w-full mt-8" />
       </main>
       <Footer />
     </div>

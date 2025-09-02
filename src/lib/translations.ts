@@ -109,10 +109,23 @@ export const translations = {
     'bmiRangeNormal': '18.5 - 24.9',
     'bmiRangeOverweight': '25.0 - 29.9',
     'bmiRangeObese': '≥ 30.0',
+    'sedentaryLifestyle': 'This value is an estimate of your Basal Metabolic Rate (BMR) assuming a sedentary lifestyle. Your actual needs may vary based on your daily activity level.',
 
     // Cookie Consent
     'cookieConsent': 'We use cookies to improve your experience. By continuing to browse, you agree to our use of cookies.',
     'accept': 'Accept',
+
+    // FAQ Section
+    'faqTitle': 'Frequently Asked Questions',
+    'faqSubtitle': 'Have questions? We have answers. Find quick solutions to common queries about our conversion tools.',
+    'faqQuestion1': 'How accurate is the currency converter?',
+    'faqAnswer1': 'Our currency converter uses real-time data from reliable financial sources to provide the most up-to-date exchange rates possible. However, rates can fluctuate, so the values should be used as an estimate.',
+    'faqQuestion2': 'What formula is used for the BMI calculation?',
+    'faqAnswer2': 'We use the standard Quetelet index formula for calculating Body Mass Index (BMI). The calculation is your weight (in kilograms) divided by the square of your height (in meters).',
+    'faqQuestion3': 'Can I calculate compound interest for my investments?',
+    'faqAnswer3': 'Yes! Our financial calculator includes a compound interest tool. You can input your principal amount, annual rate, compounding frequency, and time period to see how your investment can grow.',
+    'faqQuestion4': 'Are the measurement conversions based on a specific standard?',
+    'faqAnswer4': 'All our measurement conversions are based on standard international (SI) units and imperial units. For example, we use the standard conversion factor of 2.54 centimeters per inch for length conversions.',
   },
   pt: {
     // General
@@ -221,9 +234,22 @@ export const translations = {
     'bmiRangeNormal': '18,5 - 24,9',
     'bmiRangeOverweight': '25,0 - 29,9',
     'bmiRangeObese': '≥ 30,0',
+    'sedentaryLifestyle': 'Este valor é uma estimativa da sua Taxa Metabólica Basal (TMB) considerando um estilo de vida sedentário. Suas necessidades reais podem variar com base no seu nível de atividade diária.',
 
     // Cookie Consent
     'cookieConsent': 'Nós usamos cookies para melhorar sua experiência. Ao continuar a navegar, você concorda com nosso uso de cookies.',
     'accept': 'Aceitar',
+
+    // FAQ Section
+    'faqTitle': 'Perguntas Frequentes',
+    'faqSubtitle': 'Tem perguntas? Nós temos as respostas. Encontre soluções rápidas para dúvidas comuns sobre nossas ferramentas de conversão.',
+    'faqQuestion1': 'Qual a precisão do conversor de moedas?',
+    'faqAnswer1': 'Nosso conversor de moedas usa dados em tempo real de fontes financeiras confiáveis para fornecer as taxas de câmbio mais atualizadas possíveis. No entanto, as taxas podem flutuar, então os valores devem ser usados como uma estimativa.',
+    'faqQuestion2': 'Qual fórmula é usada para o cálculo do IMC?',
+    'faqAnswer2': 'Usamos a fórmula padrão do índice de Quetelet para calcular o Índice de Massa Corporal (IMC). O cálculo é o seu peso (em quilogramas) dividido pelo quadrado da sua altura (em metros).',
+    'faqQuestion3': 'Posso calcular juros compostos para meus investimentos?',
+    'faqAnswer3': 'Sim! Nossa calculadora financeira inclui uma ferramenta de juros compostos. Você pode inserir o valor principal, taxa anual, frequência de capitalização e período de tempo para ver como seu investimento pode crescer.',
+    'faqQuestion4': 'As conversões de medidas são baseadas em um padrão específico?',
+    'faqAnswer4': 'Todas as nossas conversões de medidas são baseadas em unidades padrão do sistema internacional (SI) e unidades imperiais. Por exemplo, usamos o fator de conversão padrão de 2,54 centímetros por polegada para conversões de comprimento.',
   }
 };

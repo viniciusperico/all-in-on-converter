@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { createContext, useState, useContext, useCallback, ReactNode } from 'react';
+import React, { createContext, useState, useContext, useCallback, ReactNode, useEffect } from 'react';
 import {
   AlertDialog,
   AlertDialogContent,
@@ -10,7 +10,6 @@ import {
   AlertDialogFooter,
   AlertDialogCancel,
 } from '@/components/ui/alert-dialog';
-import { AdPlaceholder } from '@/components/ad-placeholder';
 import { useLanguage } from './language-context';
 
 const INTERACTION_THRESHOLD = 2;
@@ -30,6 +29,18 @@ const InterstitialAdContext = createContext<InterstitialAdContextType | undefine
  */
 function InterstitialAd({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    if (isOpen) {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error("AdSense error:", e);
+      }
+    }
+  }, [isOpen]);
+
   return (
     <AlertDialog open={isOpen} onOpenChange={onClose}>
       <AlertDialogContent>
@@ -37,7 +48,12 @@ function InterstitialAd({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
           <AlertDialogTitle>{t('advertisement')}</AlertDialogTitle>
         </AlertDialogHeader>
         <div className="py-4">
-          <AdPlaceholder className="h-64 w-full" />
+          <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-3866356690472317"
+            data-ad-slot="1879087987"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
         </div>
         <AlertDialogFooter>
           <AlertDialogCancel onClick={onClose}>Fechar</AlertDialogCancel>

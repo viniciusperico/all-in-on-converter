@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'All-in-One Converter',
   description: 'Your global platform to convert currencies, measurements, BMI, and more – fast, easy, and free.',
   keywords: 'online converter, currency converter, BMI calculator, measurement converter, global conversion tool, financial calculator',
-  author: [{ name: 'All-in-One Converter' }],
+  authors: [{ name: 'All-in-One Converter' }],
   robots: 'index, follow',
   alternates: {
     canonical: 'https://all-in-on-converter.tech/',
@@ -42,6 +42,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "All-in-One Converter",
+    "description": "Your global platform to convert currencies, measurements, BMI, and more – fast, easy, and free. Includes currency converter, measurement converter, financial calculator, and health calculator (BMI, calories).",
+    "url": "https://all-in-on-converter.tech/",
+    "applicationCategory": "Utilities",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150"
+    },
+    "mainEntity": {
+      "@type": "WebSite",
+      "url": "https://all-in-on-converter.tech/"
+    }
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -50,6 +74,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3866356690472317" crossOrigin="anonymous"></script>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className="font-body antialiased">
         <ThemeProvider

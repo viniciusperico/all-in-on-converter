@@ -17,7 +17,7 @@ export type ToolDefinition = {
   id: 'currency' | 'measurement' | 'financial' | 'health';
   icon: LucideIcon;
   nameKey: keyof typeof translations.en;
-  description: string;
+  descriptionKey: keyof typeof translations.en;
 };
 
 export const TOOL_DEFINITIONS: ToolDefinition[] = [
@@ -26,28 +26,28 @@ export const TOOL_DEFINITIONS: ToolDefinition[] = [
     id: 'currency',
     icon: Coins,
     nameKey: 'currencyConverter',
-    description: 'Convert between popular currencies with real-time exchange rates.',
+    descriptionKey: 'currencyDescription',
   },
   {
     name: CONVERTER_TOOLS.MEASUREMENT,
     id: 'measurement',
     icon: Ruler,
     nameKey: 'measurementConverter',
-    description: 'Convert units of length, weight, and temperature.',
+    descriptionKey: 'measurementDescription',
   },
   {
     name: CONVERTER_TOOLS.FINANCIAL,
     id: 'financial',
     icon: Landmark,
     nameKey: 'financialConverter',
-    description: 'Calculate simple and compound interest for your investments.',
+    descriptionKey: 'financialDescription',
   },
   {
     name: CONVERTER_TOOLS.HEALTH,
     id: 'health',
     icon: HeartPulse,
     nameKey: 'healthConverter',
-    description: 'Calculate health metrics like BMI and daily calorie needs.',
+    descriptionKey: 'healthDescription',
   },
 ];
 
