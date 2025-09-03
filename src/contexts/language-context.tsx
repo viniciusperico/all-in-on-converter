@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { createContext, useState, useContext, useMemo, useCallback } from 'react';
+import React, { createContext, useState, useContext, useMemo, useCallback, useEffect } from 'react';
 import { translations } from '@/lib/translations';
 
 export type Language = 'en' | 'pt';
@@ -23,6 +23,17 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
  */
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>('pt');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      if (path.startsWith('/en')) {
+        setLanguage('en');
+      } else if (path.startsWith('/pt')) {
+        setLanguage('pt');
+      }
+    }
+  }, []);
 
   /**
    * Função de tradução.

@@ -18,15 +18,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://all-in-on-converter.tech/',
     languages: {
-      'en': 'https://all-in-on-converter.tech/en',
-      'pt': 'https://all-in-on-converter.tech/pt',
+      'x-default': 'https://all-in-on-converter.tech/',
+      'en': 'https://all-in-on-converter.tech/en/',
+      'pt': 'https://all-in-on-converter.tech/pt/',
     },
   },
   openGraph: {
     title: 'All-in-One Converter',
     description: 'Convert currencies, units, BMI, and more quickly and easily, all in one place.',
     type: 'website',
-    url: 'https://all-in-on-converter.tech',
+    url: 'https://all-in-on-converter.tech/',
     images: 'https://all-in-on-converter.tech/icon.svg',
     locale: 'en_US',
   },
