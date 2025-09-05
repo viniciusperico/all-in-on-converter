@@ -41,12 +41,7 @@ export default function Home() {
       <main className="flex-1 container mx-auto px-4 py-8">
         <GoogleAd adSlot="7605794059" className="h-24 w-full mb-8" />
         
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 justify-center">
-          {/* Publicidade Lateral Esquerda (visível em telas grandes) */}
-          <aside className="hidden lg:flex justify-end sticky top-8 self-start">
-            <GoogleAd adSlot="4979630719" className="h-[600px] w-[200px]" />
-          </aside>
-
+        <div className="flex justify-center">
           {/* Conteúdo Principal */}
           <div className="w-full max-w-2xl">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -86,11 +81,6 @@ export default function Home() {
               </TabsContent>
             </Tabs>
           </div>
-
-          {/* Publicidade Lateral Direita (visível em telas grandes) */}
-          <aside className="hidden lg:flex justify-start sticky top-8 self-start">
-            <GoogleAd adSlot="4979630719" className="h-[600px] w-[200px]" />
-          </aside>
         </div>
         
         <Faq />
